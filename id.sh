@@ -13,11 +13,11 @@ read -p "PLEASE ENTER YOUR OPTION" user
 
 #create user id
 
-if[$user -eq 1]
+if [$user -eq 1]
 then
 read -p "please enter your username:" name
 id $name &> /dev/null
-if[$? -eq 0]
+if [$? -eq 0]
 then
 echo "the username already been used"
 else
@@ -32,7 +32,7 @@ fi
 if [$user -eq 2]
 then
 read -p "please enter your username" name
-id $name &>/dev/nullif[ $? -eq 0]
+id $name &>/dev/nullif [ $? -eq 0]
 then userdel -r name
 echo "delete userid sucess"
 else
@@ -72,7 +72,7 @@ if [$user -eq 5]
 then
 read -p "please enter the username:" name
 grep $name/etc/password&>/dev/null
-if[$? -eq 0]
+if [$? -eq 0]
 then
 finger $name
 echo "enter success"
