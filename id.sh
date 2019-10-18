@@ -1,16 +1,17 @@
 #!/bin/bash
-echo"
+echo "
 1.creat a userid
 2.delete the userid
 3.lock the userid
 4.unlock the userid
 5.check userid
-6.exitscript
-"
+6.exitscript"
+
 while:
 do
-read -p"PLEASE ENTER YOUR OPTION"user
-#check user id
+read -p "PLEASE ENTER YOUR OPTION" user
+
+#create user id
 
 if[$user -eq 1]
 then
@@ -68,7 +69,8 @@ fi
 
 # check user
 if [$user -eq 5]
-then"please enter the username:" name
+then
+read -p "please enter the username:" name
 grep $name/etc/password&>/dev/null
 if[$? -eq 0]
 then
